@@ -22,3 +22,7 @@ Entry.create!(desc: "Entry 2", amount: rand_price, credit_account: credit_accoun
 credit_account = Account.second
 debit_account = Account.last
 Entry.create!(desc: "Entry 3", amount: rand_price, credit_account: credit_account, debit_account: debit_account)
+
+credit_account = Account.last
+debit_account = Account.first
+Entry.create!(desc: "Entry 4", amount: rand_price, credit_account: credit_account, debit_account: debit_account)
