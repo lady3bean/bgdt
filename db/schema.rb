@@ -24,11 +24,11 @@ ActiveRecord::Schema.define(version: 20150207183131) do
 
   create_table "entries", force: :cascade do |t|
     t.text     "desc"
-    t.decimal  "amount"
+    t.decimal  "amount",            precision: 10, scale: 2
     t.integer  "credit_account_id"
     t.integer  "debit_account_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                                 null: false
+    t.datetime "updated_at",                                 null: false
   end
 
   add_index "entries", ["credit_account_id"], name: "index_entries_on_credit_account_id", using: :btree

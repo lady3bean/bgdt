@@ -8,7 +8,7 @@ puts "Creating #{num_accounts} accounts"
 end
 
 def rand_price
-  rand(1..10) + rand(1..100).to_f/100
+  rand(1..10000).to_f/100
 end
 
 credit_account = Account.first
