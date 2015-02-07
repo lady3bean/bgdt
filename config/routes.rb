@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :accounts, only: [:index, :new, :create, :show, :edit, :update] do
-    resources :entries, shallow: true, only: [:index, :new, :create, :show]
-  end
+  resources :accounts, only: [:index, :new, :create, :show, :edit, :update]
+  resources :entries, only: [:index, :new, :create, :show]
 end
 
   # The priority is based upon order of creation: first created -> highest priority.
