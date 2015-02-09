@@ -11,7 +11,7 @@ class AccountsController < ApplicationController
   def create
     @account = Account.new(account_params)
     if @account.save
-      render 'index'
+      redirect_to action: 'index'
     else
       render 'new'
     end

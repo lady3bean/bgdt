@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'home_pages#index'
+  
   resources :accounts, only: [:index, :new, :create, :show, :edit, :update]
   resources :entries, only: [:index, :new, :create, :show]
 end
