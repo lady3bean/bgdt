@@ -1,0 +1,15 @@
+  <%= form_for @entry do |f| %>
+    <p>
+      <%= f.label :amount %><br>
+      <%= f.text_field :amount %>
+    </p>
+    <p>
+      <%= f.label :credit_account %>
+      <%= f.collection_select :credit_account_id, Account.all, :id, :name, {:prompt => :true} %>
+      <%= f.label :debit_account %>
+      <%= f.collection_select :debit_account_id, Account.all, :id, :name, {:prompt => :true} %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>

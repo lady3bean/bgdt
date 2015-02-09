@@ -5,13 +5,13 @@ class AccountsController < ApplicationController
   end
 
   def new
-    @account = Account.new(account_params)
+    @account = Account.new
   end
 
   def create
     @account = Account.new(account_params)
     if @account.save
-      redirect_to @account
+      render 'index'
     else
       render 'new'
     end
