@@ -2,6 +2,7 @@
 
 <%= render 'entries/form' %>
 
+<h1>Browse By Category</h1>
 <% @categories.each do |category| %>
-  <%= link_to "#{category.cat}", category_path(category) %>
+  <h2><%= link_to "#{category.cat}", category_path(category) %></h2>
 <% end %>
