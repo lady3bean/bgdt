@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
   root 'home_pages#index'
-  
+
   resources :accounts, only: [:index, :new, :create, :show, :edit, :update]
-  resources :entries, only: [:index, :new, :create, :show]
+  resources :entries, only: [:new, :create]
+  resources :categories, only: [:show]
+
 end
 
   # The priority is based upon order of creation: first created -> highest priority.

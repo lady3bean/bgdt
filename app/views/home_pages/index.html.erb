@@ -1,3 +1,7 @@
 <h1><%= link_to 'Manage Accounts', accounts_path %></h1>
 
 <%= render 'entries/form' %>
+
+<% @categories.each do |category| %>
+  <%= link_to "#{category.cat}", category_path(category) %>
+<% end %>
