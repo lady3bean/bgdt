@@ -11,6 +11,10 @@
       <%= f.label :debit_account %>
       <%= f.collection_select :debit_account_id, Account.all, :id, :name, {:prompt => :true} %>
     </p>
+     <p>
+      <%= f.label :category %>
+      <%= f.collection_select :category_id, Category.all, :id, :cat, {:prompt => :true} %>
+    </p>
     <p>
       <%= f.submit %>
     </p>
