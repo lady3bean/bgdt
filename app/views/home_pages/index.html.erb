@@ -3,6 +3,21 @@
 <%= render 'entries/form' %>
 
 <h1>Browse By Category</h1>
-<% @categories.each do |category| %>
-  <h2><%= link_to "#{category.cat}", category_path(category) %></h2>
-<% end %>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Balance</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= link_to "#{category.cat}", category_path(category) %></td>
+        <td><%= number_to_currency(category.entries.sum(:amount))%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

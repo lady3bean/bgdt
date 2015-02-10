@@ -1,7 +1,2 @@
 <%= @category.cat %>
-<%= @category.entries.each do |entry| %>
-  <%= entry.desc %>
-  <%= entry.amount %>
-  <%= entry.credit_account_id %>
-  <%= entry.debit_account_id %>
-<% end %>
+<%= number_to_currency(@category.entries.sum(:amount))%>
