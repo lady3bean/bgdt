@@ -1,28 +1,21 @@
 Entry.delete_all
 Account.delete_all
+Category.delete_all
 
-num_accounts = 10
-puts "Creating #{num_accounts} accounts"
-1.upto(num_accounts) do |i|
-  account = Account.create!(name: "Account#{i}")
-end
+personal = Account.create!(name: "Personal")
+house = Account.create!(name: "House")
+outgoing = Account.create!(name: "Outgoing")
 
-def rand_price
-  rand(1..10000).to_f/100
-end
+rent = Category.create!(cat: "Rent")
+utilities = Category.create!(cat: "Utilities")
+living = Category.create!(cat: "Living Expenses")
+Category.create!(cat: "Gas")
+Category.create!(cat: "Car")
+Category.create!(cat: "Food")
+Category.create!(cat: "Transportation")
 
-credit_account = Account.first
-debit_account = Account.second
-Entry.create!(desc: "Entry 1", amount: rand_price, credit_account: credit_account, debit_account: debit_account)
+Entry.create!(desc: "Entry 1", amount: 20.00, credit_account: house, debit_account: outgoing, category: rent)
 
-credit_account = Account.first
-debit_account = Account.last
-Entry.create!(desc: "Entry 2", amount: rand_price, credit_account: credit_account, debit_account: debit_account)
+Entry.create!(desc: "Entry 2", amount: 34.00, credit_account: personal, debit_account: outgoing, category: utilities)
 
-credit_account = Account.second
-debit_account = Account.last
-Entry.create!(desc: "Entry 3", amount: rand_price, credit_account: credit_account, debit_account: debit_account)
-
-credit_account = Account.last
-debit_account = Account.first
-Entry.create!(desc: "Entry 4", amount: rand_price, credit_account: credit_account, debit_account: debit_account)
+Entry.create!(desc: "Entry 3", amount: 55.00, credit_account: personal, debit_account: house, category: living)
