@@ -63,8 +63,8 @@ RSpec.describe AccountsController do
         expect(assigns(:account)).to be_a_new Account
       end
       it 're-renders the new template' do
-        post :create, acount: invalid_attributes
-        expect(response).to render_template 'new'
+        post :create, account: invalid_attributes
+        expect(response).to redirect_to action: 'new'
       end
     end
   end

@@ -46,10 +46,6 @@ RSpec.describe CategoriesController do
         post :create, category: invalid_attributes
         expect(assigns(:category)).to be_a_new Category
       end
-      # it 're-renders the new template' do
-      #   post :create, category: invalid_attributes
-      #   expect(response).to render_template 'new'
-      # end
     end
   end
 

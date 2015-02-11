@@ -15,7 +15,7 @@ class CategoriesController < ApplicationController
     if @category.save
       redirect_to :action=>'index', :controller=>'home_pages'
     else
-      redirect_to :action=>'index', :controller=>'home_pages'
+      redirect_to :action=>'new'
     end
   end
    private
