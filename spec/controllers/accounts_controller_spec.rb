@@ -14,12 +14,10 @@ RSpec.describe AccountsController do
       get :index
       expect(response.status).to eq 200
     end
-
     it 'renders the index template' do
       get:index
       expect(response).to render_template('index')
     end
-
     it 'assigns @accounts' do
       accounts = Account.all
       get :index
@@ -32,12 +30,10 @@ RSpec.describe AccountsController do
       get :new
       expect(response.status).to eq 200
     end
-
     it 'renders the new template' do
       get :new
       expect(response).to render_template('new')
     end
-
     it 'assigns @account' do
       get :new
       expect(assigns(:account)).to be_a_new Account
@@ -56,10 +52,20 @@ RSpec.describe AccountsController do
         expect(assigns(:account)).to be_an Account
         expect(assigns(:account)).to be_persisted
       end
-    end
       it 'redirects to the account index' do
         post :create, account: valid_attributes
         expect(response).to redirect_to action: 'index'
       end
     end
+    context 'with invalid attributes' do
+      it 'assigns @account but does not save a new account' do
+        post :create, account: invalid_attributes
+        expect(assigns(:account)).to be_a_new Account
+      end
+      it 're-renders the new template' do
+        post :create, acount: invalid_attributes
+        expect(response).to render_template 'new'
+      end
+    end
+  end
 end
