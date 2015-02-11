@@ -3,5 +3,5 @@ class Entry < ActiveRecord::Base
   belongs_to :debit_account, class_name: 'Account', foreign_key: 'debit_account_id'
   belongs_to :category
 
-  validates  :amount, :credit_account, :debit_account, presence: true
+  validates  :amount, :credit_account_id, :debit_account_id, presence: true
 end
