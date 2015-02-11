@@ -26,4 +26,21 @@ RSpec.describe AccountsController do
       expect(assigns(:accounts)).to eq accounts
     end
   end
+
+  describe 'GET new' do
+    it 'has a 200 status code' do
+      get :new
+      expect(response.status).to eq 200
+    end
+
+    it 'renders the new template' do
+      get :new
+      expect(response).to render_template('new')
+    end
+
+    it 'assigns @account' do
+      get :new
+      expect(assigns(:account)).to be_a_new Account
+    end
+  end
 end
