@@ -15,4 +15,6 @@ class Account < ActiveRecord::Base
     end
     return total
   end
+
+  validates :name, presence: true
 end

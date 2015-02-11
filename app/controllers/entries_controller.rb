@@ -12,7 +12,7 @@ class EntriesController < ApplicationController
     if @entry.save
       redirect_to :action=>'index', :controller=>'home_pages'
     else
-      render 'new'
+      redirect_to :action=>'index', :controller=>'home_pages'
     end
   end
 

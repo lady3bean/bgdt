@@ -27,6 +27,7 @@
     <tr>
       <th>Category</th>
       <th>Balance</th>
+      <th><%= link_to 'New Category', new_category_path %></th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -36,6 +37,7 @@
       <tr>
         <td><%= link_to "#{category.cat}", category_path(category) %></td>
         <td><%= number_to_currency(category.entries.sum(:amount))%></td>
+        <td> </td>
       </tr>
     <% end %>
   </tbody>

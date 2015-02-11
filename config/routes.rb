@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :accounts, only: [:index, :new, :create, :show, :edit, :update]
   resources :entries, only: [:new, :create]
-  resources :categories, only: [:show]
+  resources :categories, only: [:show, :new, :create]
 
 end
 
