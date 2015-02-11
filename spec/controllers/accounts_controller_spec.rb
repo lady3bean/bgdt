@@ -43,4 +43,23 @@ RSpec.describe AccountsController do
       expect(assigns(:account)).to be_a_new Account
     end
   end
+
+  describe 'POST create' do
+    context 'with valid attributes' do
+      it 'saves a new account' do
+        expect {
+          post :create, account: valid_attributes
+        }.to change(Account, :count).by 1
+      end
+      it 'assigns @account' do
+        post :create, account: valid_attributes
+        expect(assigns(:account)).to be_an Account
+        expect(assigns(:account)).to be_persisted
+      end
+    end
+      it 'redirects to the account index' do
+        post :create, account: valid_attributes
+        expect(response).to redirect_to action: 'index'
+      end
+    end
 end
