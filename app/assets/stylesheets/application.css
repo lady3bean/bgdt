@@ -13,10 +13,10 @@ form{
   border:1px solid #aaa;
   border-radius:10px;
   box-shadow:0 0 15px #aaa;
-  margin: 0 auto;
+  margin: 10px;
   margin-bottom: 20px;
-  padding: 5%;
-  max-width: 50%;
+  padding: 1%;
+  max-width: 25%;
 }
 h1{
   border-bottom:1px solid #ccc;
@@ -25,9 +25,6 @@ h1{
   letter-spacing:2px;
   margin-bottom:20px;
   text-transform:uppercase;
-}
-form p{
-  margin-bottom:30px;
 }
 label{
   display:block;
@@ -41,12 +38,14 @@ form p:hover label{
   color:#0459b7;
 }
 table {
-  background-color: #f5f5f5;
-  padding: 10px;
-  border-radius: 10px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border: 1px solid #ebebeb;
+  background:#f7f7f7;
+  border:1px solid #aaa;
+  border-radius:10px;
+  box-shadow:0 0 15px #aaa;
+  margin: 10px;
+  margin-bottom: 20px;
+  padding: 1%;
+  max-width: 50%;
 }
 #table td, #table th {
   margin: 0 auto;

@@ -1,5 +1,24 @@
 <h1><%= link_to 'Manage Accounts', accounts_path %></h1>
 
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Balance</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accounts.each do |account| %>
+      <tr>
+        <td><%= account.name %></td>
+        <td><%= number_to_currency(account.balance) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= render 'entries/form' %>
 
 <h1>Browse By Category</h1>

@@ -10,7 +10,7 @@ class EntriesController < ApplicationController
   def create
     @entry = Entry.new(entry_params)
     if @entry.save
-      redirect_to :action=>'index', :controller=>'accounts'
+      redirect_to :action=>'index', :controller=>'home_pages'
     else
       render 'new'
     end
