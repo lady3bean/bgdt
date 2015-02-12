@@ -1,4 +1,7 @@
-<h1><%= link_to 'Manage Accounts', accounts_path %></h1>
+<h1>bdgt</h1>
+<h3>cause your broke ass can't afford to buy a vowel</h3>
+
+<h2><%= link_to 'Manage Accounts', accounts_path %></h2>
 
 <table>
   <thead>
@@ -21,18 +24,17 @@
 
 <%= render 'entries/form' %>
 
-<h1>Browse By Category</h1>
+<h2>Browse By Category</h2>
 <table>
   <thead>
     <tr>
       <th>Category</th>
       <th>Balance</th>
       <th>Entries</th>
-      <th colspan="2"></th>
+      <th colspan="3"></th>
     </tr>
   </thead>
-
-  <tbody>
+<tbody>
     <% @categories.each do |category| %>
       <tr>
         <td><%= link_to "#{category.cat}", category_path(category) %></td>
@@ -42,4 +44,4 @@
     <% end %>
   </tbody>
 </table>
-<h1><%= link_to 'New Category', new_category_path %></h1>
+<h2><%= link_to 'New Category', new_category_path %></h2>

@@ -18,13 +18,23 @@ form{
   padding: 1%;
   max-width: 25%;
 }
-h1{
+h2{
   border-bottom:1px solid #ccc;
   font-size:11px;
   font-weight:bold;
   letter-spacing:2px;
   margin-bottom:20px;
   text-transform:uppercase;
+}
+h1, h3{
+  text-align: right;
+  font-style: oblique;
+  font-size: 22px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+h3{
+  font-size: 16px;
 }
 label{
   display:block;
@@ -48,15 +58,15 @@ table {
   max-width: 50%;
 }
 #table td, #table th {
-  margin: 0 auto;
+  margin: 0px;
   margin-bottom: 20px;
-  padding: 5%;
+  padding: 0px;
 }
 #table thead {
   color: #999;
 }
 #table th {
-  text-align: left;
+  /*text-align: none;*/
   border-bottom: 1px solid #fff;
 }
 #table td:hover {
