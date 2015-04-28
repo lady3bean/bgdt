@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
-
-  get 'users/create'
-
   root 'home_pages#index'
 
+  get :login, to: 'sessions#new'
+  get :logout, to: 'sessions#destroy'
+
   resources :users, only: [:new, :create]
+  resources :sessions, only: [:new, :create, :destroy]
   resources :accounts, only: [:index, :new, :create]
   resources :entries, only: [:new, :create]
   resources :categories, only: [:show, :new, :create]
