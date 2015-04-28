@@ -4,16 +4,7 @@ class Account < ActiveRecord::Base
   end
 
   def balance
-    total = 0
-    id = self.id
-    entries.each do |entry|
-      if (entry.credit_account_id == id)
-        total += entry.amount
-      else
-        total -= entry.amount
-      end
-    end
-    return total
+    entries.sum(:amount)
   end
 
   validates :name, presence: true
