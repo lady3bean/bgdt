@@ -1,6 +1,12 @@
 <h1>bdgt</h1>
 <h3>cause your broke ass can't afford to buy a vowel</h3>
 
+<% if current_user %>
+  <h3><%= link_to 'Logout', logout_path%></h3>
+<% else %>
+  <h3><%= link_to 'Login or Sign up', login_path %></h3>
+<% end %>
+
 <h2><%= link_to 'Manage Accounts', accounts_path %></h2>
 
 <table>

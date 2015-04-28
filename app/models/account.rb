@@ -1,4 +1,6 @@
 class Account < ActiveRecord::Base
+  belongs_to :user
+
   def entries
     Entry.where("credit_account_id = ? OR debit_account_id = ?", self.id, self.id)
   end
