@@ -2,11 +2,11 @@
 
 I created this app as my first project at General Assembly's Three Month Web Development Immersive Course which I completed this year in Boston.
 
-I wanted to build an app that would help groups of people who share expenses to be able to track who pays for shared expenses, and where that money goes. In shared living situations, it can be difficult to keep tabs on what expenses need to be split and the types of expenses that are shared. Bgdt offers a solution to this problem by letting users add entries to various debit and credit accounts and to organize them by category.
+I wanted to build an app that would help groups of people who have shared expenses to track who pays for what, and where that money goes. In shared living situations, it can be difficult to keep tabs on what expenses need to be split and the spending habits of the household over time. Bgdt offers a solution to this problem by letting users add entries to various debit and credit accounts and to organize them by category. While a user could use bdgt for personal finances only, banking apps already exist for individuals whereas bdgt speaks to the particular problem of tracing shared expenses, which, naturally, span accross different people and times and so have no centralized system - until now! Introducing bgdt - because you're too broke to afford a vowel.
 
 #Ongoing Work
 
-I am currently setting up user authentication and assigning the account models to users accordingly
+I am currently setting up user authentication and sessions and assigning accounts to users.
 
 #Future Plans
 
