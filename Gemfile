@@ -17,11 +17,10 @@ group :development, :test do
 
   gem 'web-console', '~> 2.0'
 
-  gem 'spring'
+  gem 'spring', '~>1.3.4'
 end
 gem 'newrelic_rpm'
 gem 'rack-cors'
-gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'nokogiri'
 group :development, :test do
   gem 'capybara'

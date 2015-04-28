@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/rails-api/active_model_serializers.git
-  revision: a8243761fedbff9877a957fe9b5f21e644bb8fee
-  specs:
-    active_model_serializers (0.10.0.pre)
-      activemodel (>= 4.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -235,7 +228,7 @@ GEM
       simplecov-html (~> 0.8.0)
     simplecov-html (0.8.0)
     slop (3.6.0)
-    spring (1.3.0)
+    spring (1.3.4)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -274,7 +267,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  active_model_serializers!
   autoprefixer-rails
   bullet
   byebug
@@ -302,7 +294,7 @@ DEPENDENCIES
   rspec-rails (~> 3.1.0)
   rubocop
   sdoc (~> 0.4.0)
-  spring
+  spring (~> 1.3.4)
   turbolinks
   uglifier (>= 1.3.0)
   unicorn
