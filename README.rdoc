@@ -1,28 +1,17 @@
-== README
+#About
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I created this app as my first project at General Assembly's Three Month Web Development Immersive Course which I completed this year in Boston.
 
-Things you may want to cover:
+I wanted to build an app that would help groups of people who share expenses to be able to track who pays for shared expenses, and where that money goes. In shared living situations, it can be difficult to keep tabs on what expenses need to be split and the types of expenses that are shared. Bgdt offers a solution to this problem by letting users add entries to various debit and credit accounts and to organize them by category.
 
-* Ruby version
+#Ongoing Work
 
-* System dependencies
+I am currently setting up user authentication and assigning the account models to users accordingly
 
-* Configuration
+#Future Plans
 
-* Database creation
+Though the app is currently a pure Ruby on Rails application, I would like to introduce more visuals for browsing, so I am considering moving the front end to use Angular and d3.js. I also hope to add more means of filtering and displaying data so as to offer a visual means of understanding one’s finances.
 
-* Database initialization
+#TDD
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Well, perhaps the coding wasn’t as “driven” by testing as it was “concurrent” with testing, but this app has sound test coverage that has already proven its use value as I’ve continued to grow the application. Currently I am altering the features on the homepage and will do feature tests accordingly, and have recently added more validations and tests for making sure the zero sum accounting entry system remains uncorrupted.
