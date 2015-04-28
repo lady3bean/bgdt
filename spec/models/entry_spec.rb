@@ -11,6 +11,10 @@ RSpec.describe Entry do
       expect(Entry.create(credit_account_id: 1, debit_account_id: 2)).not_to be_valid
     end
 
+    it 'is invalid if the amount is not greater than zero' do
+      expect(Entry.create(credit_account_id: 1, debit_account_id: 2, amount: 0)).not_to be_valid
+    end
+
     it 'is invalid without a credit account' do
       expect(Entry.create(amount: 50.00, debit_account_id: 1)).not_to be_valid
     end
@@ -24,5 +28,3 @@ RSpec.describe Entry do
     end
   end
 end
-
-# validates  :amount, :credit_account, :debit_account, presence: true
