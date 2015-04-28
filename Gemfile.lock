@@ -43,6 +43,7 @@ GEM
     autoprefixer-rails (5.1.4)
       execjs
       json
+    bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.2.2)
@@ -268,6 +269,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  bcrypt
   bullet
   byebug
   capybara
