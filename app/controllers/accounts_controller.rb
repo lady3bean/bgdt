@@ -1,7 +1,11 @@
 class AccountsController < ApplicationController
 
   def index
-    @accounts = Account.all
+    if current_user
+      @accounts = current_user.accounts
+    else
+      redirect_to action: 'new', controller: 'sessions'
+    end
   end
 
   def new
@@ -10,6 +14,7 @@ class AccountsController < ApplicationController
 
   def create
     @account = Account.new(account_params)
+    @account.user_id = current_user.id
     if @account.save
       redirect_to action: 'index'
     else
