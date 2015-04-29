@@ -1,7 +1,7 @@
 class HomePagesController < ApplicationController
 
   def index
-    @accounts = Account.all
+    @accounts = current_user.accounts
     @entry = Entry.new
     @categories = Category.all
   end

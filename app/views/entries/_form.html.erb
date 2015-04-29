@@ -1,7 +1,7 @@
   <h2>Make An Entry</h2>
 
 
-<%= form_for @entry, html: {class: 'foobar'} do |f| %>
+<%= form_for @entry, html: {class: 'entry-form'} do |f| %>
   <p>
     <%= f.label :amount %>
     <%= f.text_field :amount %>
@@ -12,11 +12,11 @@
   </p>
   <p>
     <%= f.label :credit_account %>
-    <%= f.collection_select :credit_account_id, Account.all, :id, :name, {:prompt => :true} %>
+    <%= f.collection_select :credit_account_id, @accounts, :id, :name, {:prompt => :true} %>
   </p>
   <p>
     <%= f.label :debit_account %>
-    <%= f.collection_select :debit_account_id, Account.all, :id, :name, {:prompt => :true} %>
+    <%= f.collection_select :debit_account_id, @accounts, :id, :name, {:prompt => :true} %>
   </p>
    <p>
     <%= f.label :category %>

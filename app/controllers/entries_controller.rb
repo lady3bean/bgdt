@@ -1,6 +1,10 @@
 class EntriesController < ApplicationController
   def index
-    @entries = Entry.all
+    if current_user
+      @entries = current_user.accounts.entries
+    else
+      redirect_to :action=> 'new', :controller=>'sessions'
+    end
   end
 
   def new
