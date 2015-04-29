@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to :action=>'index', :controller=>'home_pages'
+      redirect_to :action=>'new', :controller=>'sessions'
     else
       render :new
     end
